@@ -3,7 +3,6 @@ f <- file("day_6.txt","rt")
 # PART I
 # Convert directly to a matrix of characters
 lines <- strsplit(readLines(f),split='\\s+')
-numbers_count <- nrow(mat)-1
 
 # remove empty element in the list
 for (i in 1:length(lines)){
@@ -35,6 +34,8 @@ for (col in 1:ncol(numbers_matrix)){
 res_2 <- 0
 # parse the file in a matrix for each character
 mat <-  do.call(rbind,strsplit(readLines("day_6.txt"),""))
+numbers_count <- nrow(mat)-1
+
 # get the first operation
 op <- mat[numbers_count+1,1]
 ncols = ncol(mat)  
